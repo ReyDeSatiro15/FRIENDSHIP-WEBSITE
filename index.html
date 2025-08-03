@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Friendship Day Milauni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<audio id="bg-music" src="music/i_like_me_better.mp3" autoplay loop></audio>
+<script>
+  // Make sure audio starts muted because browsers block autoplay with sound
+  const audio = document.getElementById('bg-music');
+  audio.volume = 0.2;
+  audio.muted = false;
+
+  document.addEventListener('click', () => {
+    audio.play().catch(() => {});
+  }, { once: true });
+</script>
+
+
+
+<body>
+  <header>
+    <h1>Happy Friendship Day, Milauni! 🫶</h1>
+    <p>You’re not just my friend — you’re my family. Scroll down! 👇</p>
+  </header>
+
+  <section id="gallery">
+    <h2>Our Memories 📸</h2>
+    <div class="slideshow">
+      <button onclick="prevSlide()">&#10094; Prev</button>
+      <img id="slideImage" src="images/img1.jpg" alt="Slideshow image">
+      <button onclick="nextSlide()">Next &#10095;</button>
+    </div>
+  </section>
+
+  <section id="message">
+    <h2>Messages 💌</h2>
+    <p id="friendMessage"></p>
+  </section>
+
+  <footer>
+  <p>Made with 💖 by Harshil Sampat | All Rights Reserved | Happy Friendship Day Milauni ✨</p>
+</footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  // Confetti burst on load
+  window.onload = () => {
+    confetti({
+      particleCount: 200,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  };
+</script>
+
+</body>
+</html>

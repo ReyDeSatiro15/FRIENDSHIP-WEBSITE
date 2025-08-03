@@ -1,0 +1,139 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5ccd4, #e2a9c7, #9ecff7);
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
+  color: #333;
+  text-align: center;
+}
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  padding: 80px 20px 60px;
+  background: linear-gradient(135deg, #ff80ab, #ffb6c1);
+  border-bottom: 3px solid #ff69b4;
+  color: white;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.3rem;
+}
+
+
+section {
+  padding: 80px 20px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.slideshow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.slideshow img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.slideshow img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.slideshow button {
+  background: #ff69b4;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.slideshow button:hover {
+  background: #ff1493;
+  transform: scale(1.05);
+}
+
+#message p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+footer {
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade[src] {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .slideshow {
+    flex-direction: column;
+  }
+
+  .slideshow button {
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  #message p {
+    font-size: 1.2rem;
+  }
+}
